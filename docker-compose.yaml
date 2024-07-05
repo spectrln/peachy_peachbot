@@ -1,0 +1,11 @@
+version: '2.20.3'
+
+services:
+  telegram-bot:
+    container_name: peachypeach
+    working_dir: /peachy_peach_bot
+    restart: always
+    build:
+        context: .
+        dockerfile: Dockerfile
+    command: sh -c "python main.py"
