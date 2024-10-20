@@ -6,17 +6,23 @@ router = Router()
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.answer('Вы Peachy Peach?')
+    await message.answer('Вы зачем-то до сих пор заходите. Вы Peachy Peach?')
     
 @router.message(lambda msg: msg.text.lower() == "да")
 async def answer(message: Message):
-    await message.answer("Ураааааааааааа!")
-    await message.answer_sticker("CAACAgEAAxkBAAEMb1pmh1FoyM8qJ3gJ1TAPxHqg6mOhMwAC6gIAAkzs4Ed1zNDPilb6bTUE")
+    await message.answer("Удачи в новой жизни.\nhttps://www.youtube.com/watch?v=PEK3BgK5Zyo")
+    
     
 @router.message()
 async def answer(message: Message):
-    await message.answer("Ну что же вы....")
-    await message.answer_sticker("CAACAgEAAxkBAAEMb1Zmh0eOHvG9XDFNlNZPGtmGSh16gQACAQIAAjZZQURFqRmV5ZBj1zUE")
+    await message.answer('''
+Я любил Peachy Peach.
+\nЗнал, что ей было со мной очень сложно жить.
+\nЯ был очень рад, что она все это время держалась.
+\nПрощайте, Peachy Peach.
+\nЯ помню, как вы согревали меня в самый холодный ветер зимой.
+\nhttps://www.youtube.com/watch?v=oh0RQ_TgDnQ''')
+    
 
 
 

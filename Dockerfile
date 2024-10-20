@@ -8,10 +8,9 @@ WORKDIR /peachy_peach_bot
 COPY ./requirements.txt ./
 
 # Устанавливаем зависимости 
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r ./requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r ./requirements.txt
 
 # Копируем файлы и билд
 COPY ./ ./
 
-RUN chmod -R 777 ./
+RUN find . -type d -exec chmod -R 755 ./ && find . -type f -exec chmod -R 644 ./
