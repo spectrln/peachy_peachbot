@@ -13,4 +13,4 @@ RUN pip install --upgrade pip && pip install --no-cache-dir -r ./requirements.tx
 # Копируем файлы и билд
 COPY ./ ./
 
-RUN find . -type d -exec chmod -R 755 ./ && find . -type f -exec chmod -R 644 ./
+RUN chmod -R 755 ./ ./
