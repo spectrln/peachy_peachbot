@@ -14,7 +14,7 @@ async def cmd_start(message: Message):
 @router.message(lambda msg: msg.text.lower() == "да")
 
 async def answer(message: Message):
-    await message.answer_photo(photo="https://media.tenor.com/MIpPcIjKsnwAAAAj/derpy-hooves.gif")
+    await message.answer_animation(animation="https://media.tenor.com/MIpPcIjKsnwAAAAj/derpy-hooves.gif")
     
     
 
@@ -22,10 +22,10 @@ async def answer(message: Message):
     
 async def answer(message: Message):
      
-    await message.answer_photo(
+    await message.answer_animation(
         caption='''Так и думал.
-        \nhttps://youtu.be/CTQxNgCejVg?si=x24B_Rn5OBkjhzYM''',
-        photo="https://media1.tenor.com/m/mdIaMTCiCmcAAAAC/twilight-sparkle-twilight.gif",
+        \n''',
+        animation="https://media1.tenor.com/m/mdIaMTCiCmcAAAAC/twilight-sparkle-twilight.gif",
         caption2=""
         )
     
