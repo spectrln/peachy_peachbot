@@ -14,7 +14,10 @@ async def cmd_start(message: Message):
 @router.message(lambda msg: msg.text.lower() == "да")
 
 async def answer(message: Message):
-    await message.answer_animation(animation="https://media.tenor.com/MIpPcIjKsnwAAAAj/derpy-hooves.gif")
+    await message.answer_animation(
+        caption='''Ура!
+        \n''',
+        animation="https://media.tenor.com/MIpPcIjKsnwAAAAj/derpy-hooves.gif")
     
     
 
