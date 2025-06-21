@@ -4,24 +4,31 @@ from aiogram.types import Message
 
 router = Router()
 
+gif = "https://media.tenor.com/MIpPcIjKsnwAAAAj/derpy-hooves.gif"
+gif2 = "https://media1.tenor.com/m/mdIaMTCiCmcAAAAC/twilight-sparkle-twilight.gif"
+
 @router.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.answer('Вы зачем-то до сих пор заходите. Вы Peachy Peach?')
+    await message.answer("Любовный Peachy Peach?")
     
 @router.message(lambda msg: msg.text.lower() == "да")
+
 async def answer(message: Message):
-    await message.answer("Удачи в новой жизни.\nhttps://www.youtube.com/watch?v=PEK3BgK5Zyo")
+    await message.answer_photo(photo="https://media.tenor.com/MIpPcIjKsnwAAAAj/derpy-hooves.gif")
     
     
+
 @router.message()
+    
 async def answer(message: Message):
-    await message.answer('''
-Я любил Peachy Peach.
-\nЗнал, что ей было со мной очень сложно жить.
-\nЯ был очень рад, что она все это время держалась.
-\nПрощайте, Peachy Peach.
-\nЯ помню, как вы согревали меня в самый холодный ветер зимой.
-\nhttps://www.youtube.com/watch?v=oh0RQ_TgDnQ''')
+     
+    await message.answer_photo(
+        caption='''Так и думал.
+        \nhttps://youtu.be/CTQxNgCejVg?si=x24B_Rn5OBkjhzYM''',
+        photo="https://media1.tenor.com/m/mdIaMTCiCmcAAAAC/twilight-sparkle-twilight.gif",
+        caption2=""
+        )
+    
     
 
 
